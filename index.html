@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Smart International Trip Budget Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>✈️ Smart International Trip Budget Management System</h1>
+  <p>Plan your trip, convert currencies, track every expense and stay within budget — all in one place.</p>
+  <a class="btn" href="#planner">Start Planning</a>
+</header>
+<main>
+<section>
+  <h2>Features</h2>
+  <div class="grid">
+    <div class="card"><h3>💰 Budget Setting</h3><p>Set a total budget and see what is left in real time.</p></div>
+    <div class="card"><h3>💱 Currency Conversion</h3><p>Spend in local currency, track in your home currency.</p></div>
+    <div class="card"><h3>📊 Category Tracking</h3><p>Flights, stay, food, transport, shopping and more.</p></div>
+    <div class="card"><h3>🔔 Smart Alerts</h3><p>Warnings when you cross 80% or exceed your budget.</p></div>
+  </div>
+</section>
+
+<section id="planner">
+  <h2>Budget Planner</h2>
+  <div class="planner">
+    <div class="card">
+      <h3>Trip Details</h3>
+      <label>Destination</label>
+      <input id="dest" value="Tokyo, Japan">
+      <label>Total budget (INR ₹)</label>
+      <input id="budget" type="number" value="150000" min="0">
+      <h3 style="margin-top:20px">Add Expense</h3>
+      <label>Category</label>
+      <select id="cat"><option>Flights</option><option>Accommodation</option><option>Food</option><option>Transport</option><option>Shopping</option><option>Activities</option></select>
+      <div class="row">
+        <div><label>Amount</label><input id="amt" type="number" min="0" placeholder="0"></div>
+        <div><label>Currency</label><select id="cur"><option value="1">INR ₹</option><option value="88">USD $</option><option value="95">EUR €</option><option value="0.58">JPY ¥</option><option value="112">GBP £</option><option value="24">AED</option></select></div>
+      </div>
+      <p style="margin:14px 0 0"><button class="btn" id="add">Add Expense</button></p>
+    </div>
+    <div class="card">
+      <h3>Summary — <span id="d"></span></h3>
+      <div class="stat" id="spent">₹0</div>
+      <div class="bar"><div id="fill"></div></div>
+      <div id="msg" class="ok">Add expenses to begin.</div>
+      <p style="margin-top:8px">Remaining: <b id="left">₹0</b></p>
+      <ul id="list"></ul>
+    </div>
+  </div>
+  <div class="card" style="margin-top:20px">
+    <h3>By Category</h3>
+    <div class="tbl"><table><thead><tr><th>Category</th><th>Spent (₹)</th><th>Share</th></tr></thead><tbody id="cats"></tbody></table></div>
+  </div>
+</section>
+
+<section>
+  <h2>How It Works</h2>
+  <div class="grid">
+    <div class="card"><h3>1. Plan</h3><p>Enter destination and total budget.</p></div>
+    <div class="card"><h3>2. Track</h3><p>Log expenses in any currency.</p></div>
+    <div class="card"><h3>3. Control</h3><p>Review the summary and alerts.</p></div>
+  </div>
+</section>
+<section id="team">
+  <h2>Group Members</h2>
+  <div class="card tbl"><table class="team"><thead><tr><th>Sr.</th><th>Name</th><th>Roll No</th></tr></thead><tbody>
+    <tr><td>1</td><td>Shrawani Shinde</td><td>AD2667</td></tr>
+    <tr><td>2</td><td>Suhani Dalve</td><td>AD2665</td></tr>
+    <tr><td>3</td><td>Saniket Joshi</td><td>AD2666</td></tr>
+    <tr><td>4</td><td>Shivam Hingane</td><td>AD2664</td></tr>
+    <tr><td>5</td><td>Devesh Nehate</td><td>AD2662</td></tr>
+  </tbody></table></div>
+</section>
+</main>
+<footer>Demo rates are approximate and fixed. Built with HTML, CSS and JavaScript.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
